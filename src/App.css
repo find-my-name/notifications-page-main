@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --bg-dark-grey: hsl(219, 12%, 42%);
+  --bg-grey: hsl(219, 14%, 63%);
+  --bg-blue: hsl(219, 85%, 26%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(210, 60%, 98%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 60vw;
+  background-color: #fff;
+  padding: 2em 1.5em 0 1.5em;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px hsl(211, 68%, 94%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.header .notifs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .notifs h2 {
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.header .notifs .unread {
+  background-color: hsl(219, 85%, 26%);
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+.header .mark-all {
+  cursor: pointer;
+  color: var(--bg-dark-grey);
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.header .mark-all:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+/* Cards */
+.card {
+  display: flex;
+  font-size: 14px;
+  padding: 1em 1.2em;
+  gap: 1.3em;
+  color: var(--bg-dark-grey);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.card.unread {
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 12px;
+}
+
+.card b {
+  margin-right: 3px;
+  font-weight: 800;
+  color: #000;
+  cursor: pointer;
+}
+
+.card b:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.card img {
+  width: 40px;
+}
+
+.card .hero {
+  line-height: 1.5;
+}
+
+.hero .content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card span {
+  font-weight: 800;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.card span:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.card .dot {
+  width: 7px;
+  height: 7px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  margin-top: 1px;
+}
+
+.card .message {
+  margin-top: 1em;
+  border: 1px solid hsl(211, 68%, 94%);
+  padding: 1em 1.3em;
+}
+
+.card .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Utility Classes */
+.grey {
+  color: var(--bg-dark-grey);
+}
+
+.l-grey {
+  color: var(--bg-grey);
+}
+
+.blue {
+  color: var(--bg-blue);
+}
+
+/* Media Queries */
+@media (max-width: 568px) {
+  body {
+    display: block;
+  }
+  .container {
+    width: 100%;
+  }
+}
